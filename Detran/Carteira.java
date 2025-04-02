@@ -20,12 +20,11 @@ public class Carteira
        this.pontos = 0;
        this.situacao = "valida";
        
-       
    }
    
-   void acrescentarPontos(){
+   void acrescentarPontos(int pontos){
        System.out.println("Infracao registrada, 5 pontos foram adicionados a sua carteira.");
-       this.pontos += 5;
+       this.pontos += pontos;
     }
     
    void consultarPontos(){
@@ -34,7 +33,6 @@ public class Carteira
    
    void zerarCarteira(){
        this.pontos = 0;
-       this.situacao = "valida";
    }
    
    void apreenderCarteira(){
