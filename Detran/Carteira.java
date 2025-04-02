@@ -1,18 +1,31 @@
- 
-
-
-public class Carteira
+ public class Carteira
 {
-   int identNum;
+   private int numero;
    double cpf;
    String tipo;
    int datValidade;
    int datExpedicao;
-   int pontos;
+   private int pontos;
    String situacao;
    
-   public Carteira (int identNum, float cpf,String tipo,int datValidade, int datExpedicao){
-       this.identNum = identNum;
+   // funcao de encapsulamento set e get:
+   public void setNumero(int numero){
+       this.numero = numero;
+       
+   }
+   
+   public int getNumero(int numero){
+       return this.numero;
+       
+   } // -> Fazer isso com todas as variaveis
+   
+   public void setPontos(){
+       
+   }
+   
+   
+   public Carteira (int numero, float cpf,String tipo,int datValidade, int datExpedicao){
+       this.numero = numero;
        this.cpf = cpf;
        this.tipo = tipo;
        this.datExpedicao = datExpedicao;
@@ -25,6 +38,8 @@ public class Carteira
    void acrescentarPontos(int pontos){
        System.out.println("Infracao registrada, 5 pontos foram adicionados a sua carteira.");
        this.pontos += pontos;
+       
+       this.setPontos(this.setPontos()+pontos);
     }
     
    void consultarPontos(){
