@@ -19,11 +19,16 @@
        
    } // -> Fazer isso com todas as variaveis
    
-   public void setPontos(){
+   public void setPontos(int pontos){
+       this.pontos = pontos;
        
    }
    
+   public int getPontos(){
+       return this.pontos;
+   }
    
+   // Construtor:
    public Carteira (int numero, float cpf,String tipo,int datValidade, int datExpedicao){
        this.numero = numero;
        this.cpf = cpf;
@@ -37,9 +42,8 @@
    
    void acrescentarPontos(int pontos){
        System.out.println("Infracao registrada, 5 pontos foram adicionados a sua carteira.");
-       this.pontos += pontos;
        
-       this.setPontos(this.setPontos()+pontos);
+       this.setPontos(pontos);
     }
     
    void consultarPontos(){
