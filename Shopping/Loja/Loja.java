@@ -55,11 +55,43 @@ public class Loja{
        return this.area;
     }
     
-   //Construtor
-   public Loja(String nome, String razao, int numCnpj, int dogCnpj, float Fat, float area){
-       
-       
+   //Construtor 1
+   public Loja(String nome, String razao, int numCnpj, int digCnpj){
+    this.nome = nome;
+    this.razao = razao;
+    this.numCnpj = numCnpj;
+    this.digCnpj = digCnpj;
    }
+
+   // Construtor 2
+   public Loja(String nome, String razao, int numCnpj, int digCnpj, float fat){
+    this(nome,nome,numCnpj,digCnpj);
+
+    this.fat = fat;
+
+   }
+   public void verificarFaturamente(Loja fatLoja1, Loja fatLoja2){
+    if(fatLoja1.fat > fatLoja2.fat){
+        System.out.print("A loja " + fatLoja1.getnome() + " possui um faturamento maior que a loja " + fatLoja2.getnome() );
+
+    } else{
+        System.out.print("A loja " + fatLoja2.getnome() + " possui um faturamento maior que a loja " + fatLoja1.getnome() );
+    }
+
+   }
+
+   public void calcularAluguel(){
+    float area = this.getArea();
+
+    area *= 50;
+
+    System.out.println("Seu aluguel sera de: " + area);
+    
+
+
+   }
+
+
 }
 
 

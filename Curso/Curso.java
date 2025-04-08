@@ -46,5 +46,32 @@ public class Curso
     public int getAnoCriacao(){
         return this.anoCriacao;
     }
+
+   public Curso(int cod, String nome, int duracao, float valorCurso, int anoCriacao){
+    this.cod = cod;
+    this.nome = nome;
+    this.duracao = duracao;
+    this.valorCurso = valorCurso;
+    this.anoCriacao = anoCriacao;
+
+   }
+
+   public Curso(int cod, String nome, float valorCurso, int anoCriacao){
+    this(cod, nome, 0, valorCurso, anoCriacao);
+    if(this.getDuracao() == 0 ){
+        this.setDuracao(8);
+    }
+   }
+
+   public void calcularMensalidade(){
+    double valor = this.getValorCurso();
+
+    valor /= this.getDuracao();
+
+    System.out.println("Voce paragara em seus "+ this.getDuracao() + " semestres, o valor de " + valor);
+
+   }
+
+   
     
 }
