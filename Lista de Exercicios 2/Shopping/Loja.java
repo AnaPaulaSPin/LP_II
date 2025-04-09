@@ -1,11 +1,12 @@
 
 public class Loja{
    private String nome;
-   private String razao;
+   private String razaoSocial;
    private int numCnpj;
    private int digCnpj;
    private float fat;
    private float area;
+   private String publicoAlvo;
    
    public void setnome(String nome){
        this.nome = nome;
@@ -15,12 +16,12 @@ public class Loja{
        return this.nome;
     }
     
-    public void setRazao(String razao){
-       this.razao = razao;
+    public void setRazaoSocial(String razaoSocial){
+       this.razaoSocial = razaoSocial;
    }
    
-   public String getRazao(){
-       return this.razao;
+   public String getRazaoSocial(){
+       return this.razaoSocial;
     }
     
     public void setNumCnpj(int numCnpj){
@@ -55,23 +56,34 @@ public class Loja{
        return this.area;
     }
     
-   //Construtor 1
-   public Loja(String nome, String razao, int numCnpj, int digCnpj){
+    public void setPublicoAlvo(String publicoAlvo){
+        this.publicoAlvo = publicoAlvo;        
+    }
+    
+    public String getPublicoAlvo(String publicoAlvo){
+        return this.publicoAlvo;
+    }
+    
+   //Construtor 1:
+   public Loja(String nome, String razaoSocial, int numCnpj, int digCnpj){
     this.nome = nome;
-    this.razao = razao;
+    this.razaoSocial = razaoSocial;
     this.numCnpj = numCnpj;
     this.digCnpj = digCnpj;
    }
 
-   // Construtor 2
-   public Loja(String nome, String razao, int numCnpj, int digCnpj, float fat){
+   // Construtor 2:
+   public Loja(String nome, String razao, int numCnpj, int digCnpj, float fat, String publicoAlvo){
     this(nome,nome,numCnpj,digCnpj);
 
     this.fat = fat;
+    this.publicoAlvo = publicoAlvo;
 
    }
+   
+   //Metodo para verificar a fatura da loja: 
    public void verificarFaturamente(Loja fatLoja1, Loja fatLoja2){
-    if(fatLoja1.fat > fatLoja2.fat){
+    if(fatLoja1.getfat() > fatLoja2.getfat()){
         System.out.print("A loja " + fatLoja1.getnome() + " possui um faturamento maior que a loja " + fatLoja2.getnome() );
 
     } else{
