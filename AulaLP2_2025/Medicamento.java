@@ -1,10 +1,3 @@
-
-/**
- * Escreva uma descrição da classe Medicamento aqui.
- * 
- * @author (seu nome) 
- * @version (um número da versão ou uma data)
- */
 public class Medicamento
 {
     private String nome,principioAtivo;
