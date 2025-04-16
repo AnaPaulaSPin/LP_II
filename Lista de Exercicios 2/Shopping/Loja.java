@@ -83,7 +83,7 @@ public class Loja{
    
    //Metodo para verificar a fatura da loja: 
    public void verificarFaturamente(Loja fatLoja1, Loja fatLoja2){
-    if(fatLoja1.getfat() > fatLoja2.getfat()){
+    if(fatLoja1.getFat() > fatLoja2.getFat()){
         System.out.print("A loja " + fatLoja1.getnome() + " possui um faturamento maior que a loja " + fatLoja2.getnome() );
 
     } else{
