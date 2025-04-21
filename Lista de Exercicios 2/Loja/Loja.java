@@ -8,6 +8,41 @@ public class Loja{
    private float area;
    private String publicoAlvo;
    
+   //Construtor 1:
+   public Loja(String nome, String razaoSocial, int numCnpj, int digCnpj){
+    this.nome = nome;
+    this.razaoSocial = razaoSocial;
+    this.numCnpj = numCnpj;
+    this.digCnpj = digCnpj;
+   }
+
+   // Construtor 2:
+   public Loja(String nome, String razao, int numCnpj, int digCnpj, float fat, String publicoAlvo){
+    this(nome,nome,numCnpj,digCnpj);
+
+    this.fat = fat;
+    this.publicoAlvo = publicoAlvo;
+
+   }
+   
+   //Metodo para verificar a fatura da loja: 
+   public void verificarFaturamente(Loja fatLoja2){
+    if(this.getFat() > fatLoja2.getFat()){
+        System.out.print("A loja " + this.getnome() + " possui um faturamento maior que a loja " + fatLoja2.getnome() );
+
+    } else{
+        System.out.print("A loja " + fatLoja2.getnome() + " possui um faturamento maior que a loja " + this.getnome() );
+    }
+
+   }
+
+   public void calcularAluguel(){
+    float area = this.getArea();
+    area *= 50;
+    System.out.println("Seu aluguel sera de: " + area);
+    
+   }
+   
    public void setnome(String nome){
        this.nome = nome;
    }
@@ -64,45 +99,6 @@ public class Loja{
         return this.publicoAlvo;
     }
     
-   //Construtor 1:
-   public Loja(String nome, String razaoSocial, int numCnpj, int digCnpj){
-    this.nome = nome;
-    this.razaoSocial = razaoSocial;
-    this.numCnpj = numCnpj;
-    this.digCnpj = digCnpj;
-   }
-
-   // Construtor 2:
-   public Loja(String nome, String razao, int numCnpj, int digCnpj, float fat, String publicoAlvo){
-    this(nome,nome,numCnpj,digCnpj);
-
-    this.fat = fat;
-    this.publicoAlvo = publicoAlvo;
-
-   }
-   
-   //Metodo para verificar a fatura da loja: 
-   public void verificarFaturamente(Loja fatLoja1, Loja fatLoja2){
-    if(fatLoja1.getFat() > fatLoja2.getFat()){
-        System.out.print("A loja " + fatLoja1.getnome() + " possui um faturamento maior que a loja " + fatLoja2.getnome() );
-
-    } else{
-        System.out.print("A loja " + fatLoja2.getnome() + " possui um faturamento maior que a loja " + fatLoja1.getnome() );
-    }
-
-   }
-
-   public void calcularAluguel(){
-    float area = this.getArea();
-
-    area *= 50;
-
-    System.out.println("Seu aluguel sera de: " + area);
-    
-
-
-   }
-
 
 }
 
