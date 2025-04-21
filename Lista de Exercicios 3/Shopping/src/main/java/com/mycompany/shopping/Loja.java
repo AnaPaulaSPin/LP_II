@@ -1,3 +1,6 @@
+
+package com.mycompany.shopping;
+
 public class Loja {
     private String nome;
    private String razaoSocial;

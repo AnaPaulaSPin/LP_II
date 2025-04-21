@@ -1,5 +1,6 @@
-public class Loja {
-    private String nome;
+
+public class Loja{
+   private String nome;
    private String razaoSocial;
    private int numCnpj;
    private int digCnpj;
@@ -36,12 +37,11 @@ public class Loja {
 
    }
 
-   public void calcularAluguel(){
-    float area1 = this.getArea();
-    area1 *= 50;
-    System.out.println("Seu aluguel sera de: " + area1);
-    this.setAluguel(area1);
-    
+   public float calcularAluguel(){
+    float area = this.getArea();
+    area *= 50;
+    System.out.println("Seu aluguel sera de: " + area);
+    return area;
     
    }
    
@@ -100,14 +100,9 @@ public class Loja {
     public String getPublicoAlvo(String publicoAlvo){
         return this.publicoAlvo;
     }
-
-
-    public float getAluguel() {
-        return aluguel;
-    }
-    public void setAluguel(float aluguel) {
-        this.aluguel = aluguel;
-    }
     
 
 }
+
+
+
