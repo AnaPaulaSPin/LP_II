@@ -24,8 +24,8 @@ public class LigacaoTelefonica {
         int fim = momentoFim.conversao();
         
         int Diferenca = fim - inicio;
+
         this.setValorTotal(Diferenca * 1);
-        System.out.println("Minutos da ligacao: " + Diferenca);
         System.out.println("O valor da sua ligacao foi: " + this.getValorTotal());
     }
     

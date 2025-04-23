@@ -14,9 +14,7 @@ public class Tempo {
         int minutos;
         minutos = this.getHora() * 60;
         minutos = minutos + this.getMinuto();
-        if(this.getSegundos() > 0){
-            minutos = minutos + 1;
-        }
+        
         return minutos;
     }
 

@@ -28,8 +28,17 @@ public class LigacaoTelefonica {
         int fim = momentoFim.conversao();
         
         int Diferenca = fim - inicio;
+         int segundos = momentoFim.getSegundos() - momentoInicio.getSegundos();
+         System.out.println("Segundos: " + segundos);
+        
+         //verificar uma logica sobre os segundos.
+        if( segundos < 0 ){
+            Diferenca = Diferenca + 1;   
+        }
+        
         this.setValorTotal(Diferenca * 1);
         System.out.println("Minutos da ligacao: " + Diferenca);
+        
         System.out.println("O valor da sua ligacao foi: " + this.getValorTotal());
     }
     

@@ -13,9 +13,9 @@
         int minutos;
         minutos = this.getHora() * 60;
         minutos = minutos + this.getMinuto();
-        if(this.getSegundos() > 0){
-            minutos = minutos + 1;
-        }
+        
+        System.out.println("Minutos da ligacao: " + minutos);
+        
         return minutos;
     }
 
