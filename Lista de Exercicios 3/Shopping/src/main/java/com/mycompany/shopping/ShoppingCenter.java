@@ -1,43 +1,39 @@
 
 package com.mycompany.shopping;
 
+import java.util.ArrayList;
+
 public class ShoppingCenter {
     private String name;
-    private int qtd;
-    private Loja lojas[];
+    private ArrayList<Loja> lojas;
     
     public ShoppingCenter(String nome){
         this.name = nome;
-        this.qtd = 0;
-        this.lojas = new Loja[10];
+        this.lojas = new ArrayList<>();
     }
     
-    public void AdicionarLoja(Loja lojaNew){
-        int n = this.getQtd();
-        this.lojas[n]= lojaNew;
-        this.setQtd(this.getQtd()+1);
-    }
     
-    public void verificarMaiorFat(){
-        int n = this.getQtd(); 
-        int possMaior = 0;
+    public void maiorFat(){
         float maior = 0;
+        String nomFantasia = null;
         
-        for(int i = 0; i < n; i++){
-            if(maior < lojas[i].getFat()){
-                maior = lojas[i].getFat();
-                possMaior = i;
-            }
-           System.out.print("A loja com maior faturamente e " + lojas[i].getnome() + " com " + lojas[i].getFat() + " de faturamente" );
+        for (Loja loja : lojas) {
+        if (maior < loja.getFat()) {
+            maior = loja.getFat();
+            nomFantasia = loja.getnome(); // aqui você precisa pegar o nome da loja
         }
+        
+            System.out.println("Loja com maior faturamento: " + nomFantasia + " (Faturamento: " + maior + ")");
+    }
+        
     }
 
     public void verificarMediaAlugueis(){
-        float fat = 0; int n = this.getQtd(); int qtdLojas = 0;
+        float fat = 0; int qtdLojas = 0;
         
-        for(int i = 0; i < n; i++){
-            if(lojas[i].getAluguel() >= 1000){
-                fat += lojas[i].getAluguel();
+        for(Loja loja : lojas){
+            if(loja.getAluguel() >= 1000){
+                fat += loja.getAluguel();
                 qtdLojas++;
             }
         }
@@ -57,20 +53,12 @@ public class ShoppingCenter {
         this.name = name;
     }
 
+    public void addLoja(Loja loj){
+        this.lojas.add(loj);
+    }
     
-    public int getQtd() {
-        return qtd;
-    }
-    public void setQtd(int qtdLoja) {
-        this.qtd = qtdLoja;
-    }
-
-
-    public Loja[] getLojas() {
-        return lojas;
-    }
-    public void setLojas(Loja[] lojas) {
-        this.lojas = lojas;
+    public ArrayList<Loja> getShop(){
+        return this.lojas;
     }
     
     
