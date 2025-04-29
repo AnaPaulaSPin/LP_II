@@ -1,4 +1,4 @@
- package com.mycompany.faculdade;
+ 
 
 import java.util.ArrayList;
 
@@ -48,6 +48,16 @@ public class Facul {
        }
    }
    
+     public Facul novaFaculdade(){
+       Facul faculdade = new Facul("Unifacs", 2005);
+       
+       for(Curso curs: cursos){
+           if (curs.getAnoCriacao() <= faculdade.getAno() + 5){
+               faculdade.addCursos(curs);
+           }
+       } 
+       return faculdade;
+   }
    
    
 
