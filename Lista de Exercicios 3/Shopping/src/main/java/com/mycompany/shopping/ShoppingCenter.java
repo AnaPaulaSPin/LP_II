@@ -22,9 +22,8 @@ public class ShoppingCenter {
             maior = loja.getFat();
             nomFantasia = loja.getnome(); // aqui você precisa pegar o nome da loja
         }
-        
-            System.out.println("Loja com maior faturamento: " + nomFantasia + " (Faturamento: " + maior + ")");
     }
+        System.out.println("Loja com maior faturamento: " + nomFantasia + " (Faturamento: " + maior + ")");
         
     }
 
@@ -39,10 +38,10 @@ public class ShoppingCenter {
         }
         if (qtdLojas > 0) {
         fat /= qtdLojas;
-        System.out.println("A média de aluguéis acima de 1000 é: " + fat);
+        System.out.println("A media de alugueis acima de 1000 e: " + fat);
         
         } else {
-        System.out.println("Não há lojas com aluguel acima de 1000.");
+        System.out.println("Nao ha lojas com aluguel acima de 1000.");
         }
     }
 

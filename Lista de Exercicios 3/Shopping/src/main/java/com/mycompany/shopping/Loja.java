@@ -12,16 +12,17 @@ public class Loja {
    private String publicoAlvo;
    
    //Construtor 1:
-   public Loja(String nome, String razaoSocial, int numCnpj, int digCnpj){
+   public Loja(String nome, String razaoSocial, int numCnpj, int digCnpj, int area){
     this.nome = nome;
     this.razaoSocial = razaoSocial;
     this.numCnpj = numCnpj;
     this.digCnpj = digCnpj;
+    this.area = area;
    }
 
    // Construtor 2:
-   public Loja(String nome, String razao, int numCnpj, int digCnpj, float fat, String publicoAlvo){
-    this(nome,nome,numCnpj,digCnpj);
+   public Loja(String nome, String razao, int numCnpj, int digCnpj, float fat, String publicoAlvo, int area){
+    this(nome,nome,numCnpj,digCnpj, area);
 
     this.fat = fat;
     this.publicoAlvo = publicoAlvo;
