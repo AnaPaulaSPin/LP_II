@@ -1,16 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package com.mycompany.celular;
-
 import java.util.ArrayList;
 
 public class Usuario {
   private String Login;
   private String senha;
   private int data;
-  private ArrayList<Aplicativos> apps;
+  private ArrayList<Aplicativo> apps;
   
   public Usuario(String login, String senha, int data){
       this.Login = login;
@@ -18,14 +12,6 @@ public class Usuario {
       this.data = data;
       this.apps = new ArrayList<>();
   }
-  
-  public float gasto(){
-        float total = 0;
-        for(Aplicativos meuapp: apps){
-            total += meuapp.getPreco();
-        }
-        return total;
-    }
   
   
     public String getLogin() {
@@ -48,12 +34,11 @@ public class Usuario {
     public void setData(int data) {
         this.data = data;
     }
-    
-       //adicionar o add
-    public ArrayList<Aplicativos> getApps() {
+
+    public ArrayList<Aplicativo> getApps() {
         return apps;
     }
-    public void setApps(ArrayList<Aplicativos> apps) {
+    public void setApps(ArrayList<Aplicativo> apps) {
         this.apps = apps;
     }
   

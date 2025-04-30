@@ -1,9 +1,6 @@
-
-package com.mycompany.celular;
-
 import java.util.ArrayList;
 
- class Aplicativos {
+ class Aplicativo {
     private String nome;
     private String objetivo;
     private int tamanho;
@@ -11,7 +8,7 @@ import java.util.ArrayList;
     private ArrayList<Usuario> users;
     
     //criar aplicativo pago
-    public Aplicativos(String nome, String objetivo, int tamanho, float preco ){
+    public Aplicativo(String nome, String objetivo, int tamanho, float preco ){
         this.nome = nome;
         this.objetivo = objetivo;
         this.tamanho = tamanho;
@@ -21,21 +18,21 @@ import java.util.ArrayList;
     }
 
     //criar aplicativo gratuito
-    public Aplicativos(String nome, String objetivo, int tamanho ){
-        this(nome,objetivo,tamanho,0);
+    public Aplicativo(String nome, String objetivo, int tamanho ){
+        this.nome = nome;
+        this.objetivo = objetivo;
+        this.tamanho = tamanho;
+        this.preco = 0;
     }
     
-    public boolean subsituirAplicativo(Aplicativos app2){
-        // Se o objeto for mais caro, pode subsitituir
-        if(this.getObjetivo().equals(app2.getObjetivo()) && this.getPreco() >= app2.getPreco()){
+     public boolean subsituirAplicativo(Aplicativo app2){
+        //porque nao menor?
+        if(this.getObjetivo().equals(app2.getObjetivo()) && this.getPreco() <= app2.getPreco()){
             return true;
         } else{
             return false;
         }
     }
-    
-    
-    
     
     public String getNome() {
         return nome;
@@ -64,12 +61,11 @@ import java.util.ArrayList;
     public void setPreco(float preco) {
         this.preco = preco;
     }
-    
-    //adicionar o add
+
     public ArrayList<Usuario> getUsers() {
         return users;
     }
-    public void addUsers(ArrayList<Usuario> users) {
+    public void setUsers(ArrayList<Usuario> users) {
         this.users = users;
     }
     

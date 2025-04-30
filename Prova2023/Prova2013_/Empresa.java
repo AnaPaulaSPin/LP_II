@@ -1,12 +1,12 @@
 
-package com.mycompany.celular;
+ 
 
 import java.util.ArrayList;
 
 public class Empresa {
     private String nome;
     private ArrayList<Usuario> users;
-    private ArrayList<Aplicativos> apps;
+    private ArrayList<Aplicativo> apps;
     
     public Empresa(String nome){
         this.nome = nome;
@@ -17,9 +17,9 @@ public class Empresa {
     //equals
     public boolean reduzConta(Usuario user){
         //Lista do user:
-        for(Aplicativos meusApp: user.getApps()){
+        for(Aplicativo meusApp: user.getApps()){
             //Lista da empresa:
-            for(Aplicativos appEmpresa: apps){
+            for(Aplicativo appEmpresa: apps){
             if(!meusApp.getNome().equals(appEmpresa.getNome()) && meusApp.subsituirAplicativo(meusApp)){
                 return true;
             }
@@ -32,7 +32,7 @@ public class Empresa {
         int maior = 0;
         String nome = null;
         
-        for(Aplicativos appEmpr: apps){
+        for(Aplicativo appEmpr: apps){
             if(maior < appEmpr.getUsers().size()){
                 maior = appEmpr.getUsers().size();
                 nome = appEmpr.getNome();
@@ -40,6 +40,7 @@ public class Empresa {
         }
         return nome;
     }
+
 
     
     public String getNome() {
@@ -49,7 +50,7 @@ public class Empresa {
         this.nome = nome;
     }
 
-       //adicionar o add
+
     public ArrayList<Usuario> getUsers() {
         return users;
     }
@@ -58,10 +59,10 @@ public class Empresa {
     }
 
     
-    public ArrayList<Aplicativos> getApps() {
+    public ArrayList<Aplicativo> getApps() {
         return apps;
     }
-    public void setApps(ArrayList<Aplicativos> apps) {
+    public void setApps(ArrayList<Aplicativo> apps) {
         this.apps = apps;
     }
     
