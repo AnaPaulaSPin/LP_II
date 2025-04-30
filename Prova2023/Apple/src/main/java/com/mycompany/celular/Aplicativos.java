@@ -1,29 +1,39 @@
-package com.mycompany.prova2013;
+
+package com.mycompany.celular;
 
 import java.util.ArrayList;
 
-public class Aplicativo {
+ class Aplicativos {
     private String nome;
     private String objetivo;
     private int tamanho;
     private float preco;
     private ArrayList<Usuario> users;
     
-    public Aplicativo(String nome, String Objetivo, int tamanho, float preco){
+    //criar aplicativo pago
+    public Aplicativos(String nome, String objetivo, int tamanho, float preco ){
         this.nome = nome;
         this.objetivo = objetivo;
         this.tamanho = tamanho;
         this.preco = preco;
-        this.users = new ArrayList<>();
+        
     }
 
+    //criar aplicativo gratuito
+    public Aplicativos(String nome, String objetivo, int tamanho ){
+        this.nome = nome;
+        this.objetivo = objetivo;
+        this.tamanho = tamanho;
+        this.preco = 0;
+        
+    }
+    
     public String getNome() {
         return nome;
     }
     public void setNome(String nome) {
         this.nome = nome;
     }
-
 
     public String getObjetivo() {
         return objetivo;
@@ -32,7 +42,6 @@ public class Aplicativo {
         this.objetivo = objetivo;
     }
 
-
     public int getTamanho() {
         return tamanho;
     }
@@ -40,14 +49,12 @@ public class Aplicativo {
         this.tamanho = tamanho;
     }
 
-
     public float getPreco() {
         return preco;
     }
     public void setPreco(float preco) {
         this.preco = preco;
     }
-
 
     public ArrayList<Usuario> getUsers() {
         return users;
@@ -57,4 +64,4 @@ public class Aplicativo {
     }
     
     
-}
+} 
