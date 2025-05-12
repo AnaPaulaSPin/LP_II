@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=ProdutoPerecivel
+comment1.params=codigo\ nome\ preco\ validade\ formaArmazen
+comment1.target=ProdutoPerecivel(int,\ java.lang.String,\ float,\ int,\ java.lang.String)
+comment2.params=
+comment2.target=int\ getValidade()
+comment3.params=validade
+comment3.target=void\ setValidade(int)
+comment4.params=
+comment4.target=java.lang.String\ getFormaArmazen()
+comment5.params=formaArmazen
+comment5.target=void\ setFormaArmazen(java.lang.String)
+numComments=6
