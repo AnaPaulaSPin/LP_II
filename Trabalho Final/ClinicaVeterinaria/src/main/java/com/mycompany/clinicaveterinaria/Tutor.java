@@ -1,4 +1,5 @@
 package com.mycompany.clinicaveterinaria;
+import java.util.ArrayList;
 
 public class Tutor {
 	private String nome;
@@ -6,8 +7,9 @@ public class Tutor {
 	private String email;
 	private int telefoneContato;
 	private String endereco;
+        private ArrayList<Animal> animais;
 	
-	public Veterinario(String nome, String cpf, String email, int telefoneContato, String endereco) {
+	public Tutor(String nome, String cpf, String email, int telefoneContato, String endereco) {
 		super();
 		this.nome = nome;
 		this.cpf = cpf;
@@ -54,5 +56,14 @@ public class Tutor {
 
 	public void setEndereço(String endereco) {
 		this.endereco = endereco;
+	}
+        
+        public void addAnimais(Animal animal){
+		this.animais.add(animal);
+
+	}
+
+	public ArrayList<Animal> getAnimais(){
+		return this.animais;
 	}
 }
