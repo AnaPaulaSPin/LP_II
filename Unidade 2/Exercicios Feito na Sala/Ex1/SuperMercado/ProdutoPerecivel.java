@@ -2,6 +2,11 @@ public class ProdutoPerecivel extends Produto{
     private int validade;
     private String formaArmazen;
     
+    public float precoVenda(float preco){
+        
+        return preco;
+    }
+    
     public ProdutoPerecivel(int codigo, String nome,  float preco, int validade,String formaArmazen ){
         super(codigo,nome,preco);
     }

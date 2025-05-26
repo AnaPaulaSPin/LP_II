@@ -1,19 +1,19 @@
 
 /**
- * Escreva uma descrição da classe Pequeno aqui.
+ * Escreva uma descrição da classe Data aqui.
  * 
  * @author (seu nome) 
  * @version (um número da versão ou uma data)
  */
-public class Pequeno
+public class Data
 {
     // variáveis de instância - substitua o exemplo abaixo pelo seu próprio
     private int x;
 
     /**
-     * Construtor para objetos da classe Pequeno
+     * Construtor para objetos da classe Data
      */
-    public Pequeno()
+    public Data()
     {
         // inicializa variáveis de instância
         x = 0;
