@@ -7,7 +7,7 @@ public class Carga extends Automovel {
     public Carga(int pesoMax, String Placa, int ano){
         super(Placa, ano);
         this.pesoMax = pesoMax;
-    }
+        }
     
     public float calcularPedagio(){
        return 2 * this.getPesoMax();

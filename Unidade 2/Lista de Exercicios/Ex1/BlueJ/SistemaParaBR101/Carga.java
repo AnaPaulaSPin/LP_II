@@ -1,33 +1,25 @@
 
-/**
- * Escreva uma descrição da classe Carga aqui.
- * 
- * @author (seu nome) 
- * @version (um número da versão ou uma data)
- */
-public class Carga extends Automovel
-{
-    // variáveis de instância - substitua o exemplo abaixo pelo seu próprio
-    private int x;
+ 
 
-    /**
-     * Construtor para objetos da classe Carga
-     */
-    public Carga()
-    {
-        // inicializa variáveis de instância
-        x = 0;
+public class Carga extends Automovel {
+    private int pesoMax;
+    
+    public Carga(int pesoMax, String Placa, int ano){
+        super(Placa, ano);
+        this.pesoMax = pesoMax;
+    }
+    
+    public float calcularPedagio(){
+       return 2 * this.getPesoMax();
+    }
+    
+
+    public int getPesoMax() {
+        return pesoMax;
     }
 
-    /**
-     * Um exemplo de um método - substitua este comentário pelo seu próprio
-     * 
-     * @param  y   um exemplo de um parâmetro de método
-     * @return     a soma de x e y 
-     */
-    public int sampleMethod(int y)
-    {
-        // escreva seu código aqui
-        return x + y;
+    public void setPesoMax(int pesoMax) {
+        this.pesoMax = pesoMax;
     }
+    
 }

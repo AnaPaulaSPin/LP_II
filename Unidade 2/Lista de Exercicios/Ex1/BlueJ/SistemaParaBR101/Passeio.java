@@ -1,33 +1,26 @@
 
-/**
- * Escreva uma descrição da classe Passeio aqui.
- * 
- * @author (seu nome) 
- * @version (um número da versão ou uma data)
- */
-public class Passeio extends Automovel
-{
-    // variáveis de instância - substitua o exemplo abaixo pelo seu próprio
-    private int x;
+ 
 
-    /**
-     * Construtor para objetos da classe Passeio
-     */
-    public Passeio()
-    {
-        // inicializa variáveis de instância
-        x = 0;
+public class Passeio extends Automovel {
+    private int numPassageiros;
+    
+    public Passeio(int numPassageiros, String Placa, int ano){
+        super(Placa, ano);
+        this.numPassageiros = numPassageiros;
+    }
+    
+    public float calcularPedagio(){
+
+        return 5 * this.getNumPassageiros();
     }
 
-    /**
-     * Um exemplo de um método - substitua este comentário pelo seu próprio
-     * 
-     * @param  y   um exemplo de um parâmetro de método
-     * @return     a soma de x e y 
-     */
-    public int sampleMethod(int y)
-    {
-        // escreva seu código aqui
-        return x + y;
+    public int getNumPassageiros() {
+        return numPassageiros;
     }
+
+    public void setNumPassageiros(int numPassageiros) {
+        this.numPassageiros = numPassageiros;
+    }
+    
+    
 }

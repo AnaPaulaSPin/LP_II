@@ -2,7 +2,7 @@ package com.mycompany.sistemabr101;
 
 import java.util.ArrayList;
 
-public class Automovel {
+public abstract class Automovel {
     protected String Placa;
     protected int ano;
     protected ArrayList<Passagem> passagens;
@@ -13,9 +13,7 @@ public class Automovel {
         this.passagens = new ArrayList<>();
     }
 
-    public float calcularPedagio(){  
-        return 6;
-    }
+    public abstract float calcularPedagio();
     
     public String getPlaca() {
         return Placa;

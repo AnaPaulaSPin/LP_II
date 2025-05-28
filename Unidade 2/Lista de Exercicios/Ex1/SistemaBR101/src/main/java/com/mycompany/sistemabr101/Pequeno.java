@@ -9,6 +9,9 @@ public class Pequeno extends Automovel {
         super(Placa, ano);
         this.modelo = modelo;
     }
+    public float calcularPedagio(){  
+        return 6;
+    }
 
     public String getModelo() {
         return modelo;

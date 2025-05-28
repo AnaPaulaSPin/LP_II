@@ -1,33 +1,45 @@
+ 
 
-/**
- * Escreva uma descrição da classe Automovel aqui.
- * 
- * @author (seu nome) 
- * @version (um número da versão ou uma data)
- */
-public class Automovel
-{
-    // variáveis de instância - substitua o exemplo abaixo pelo seu próprio
-    private int x;
+import java.util.ArrayList;
 
-    /**
-     * Construtor para objetos da classe Automovel
-     */
-    public Automovel()
-    {
-        // inicializa variáveis de instância
-        x = 0;
+public class Automovel {
+    protected String Placa;
+    protected int ano;
+    protected ArrayList<Passagem> passagens;
+    
+    public Automovel(String Placa, int ano){
+        this.Placa = Placa;
+        this.ano = ano;
+        this.passagens = new ArrayList<>();
     }
 
-    /**
-     * Um exemplo de um método - substitua este comentário pelo seu próprio
-     * 
-     * @param  y   um exemplo de um parâmetro de método
-     * @return     a soma de x e y 
-     */
-    public int sampleMethod(int y)
-    {
-        // escreva seu código aqui
-        return x + y;
+    public float calcularPedagio(){  
+        return 6;
     }
+    
+    public String getPlaca() {
+        return Placa;
+    }
+
+    public void setPlaca(String Placa) {
+        this.Placa = Placa;
+    }
+
+    public int getAno() {
+        return ano;
+    }
+
+    public void setAno(int ano) {
+        this.ano = ano;
+    }
+    
+    public ArrayList<Passagem> getPassagens() {
+        return this.passagens;
+    }
+
+    public void addPassagens(Passagem passagem) {
+        this.passagens.add(passagem);
+    }
+    
+    
 }

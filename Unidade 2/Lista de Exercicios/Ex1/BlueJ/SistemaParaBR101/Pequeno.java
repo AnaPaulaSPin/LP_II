@@ -1,33 +1,21 @@
 
-/**
- * Escreva uma descrição da classe Pequeno aqui.
- * 
- * @author (seu nome) 
- * @version (um número da versão ou uma data)
- */
-public class Pequeno extends Automovel
-{
-    // variáveis de instância - substitua o exemplo abaixo pelo seu próprio
-    private int x;
+ 
 
-    /**
-     * Construtor para objetos da classe Pequeno
-     */
-    public Pequeno()
-    {
-        // inicializa variáveis de instância
-        x = 0;
+
+public class Pequeno extends Automovel {
+    private String modelo;
+    
+    public Pequeno(String modelo, String Placa, int ano){
+        super(Placa, ano);
+        this.modelo = modelo;
     }
 
-    /**
-     * Um exemplo de um método - substitua este comentário pelo seu próprio
-     * 
-     * @param  y   um exemplo de um parâmetro de método
-     * @return     a soma de x e y 
-     */
-    public int sampleMethod(int y)
-    {
-        // escreva seu código aqui
-        return x + y;
+    public String getModelo() {
+        return modelo;
     }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+    
 }

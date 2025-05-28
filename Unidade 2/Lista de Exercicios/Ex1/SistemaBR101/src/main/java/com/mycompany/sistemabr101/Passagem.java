@@ -6,7 +6,7 @@ public class Passagem {
     private Data data;
     private String hora;
     
-    public Passagem(Data data, String hora, float valor){
+    public Passagem(Data data, String hora){
         this.data = data;
         this.hora = hora;
     }
