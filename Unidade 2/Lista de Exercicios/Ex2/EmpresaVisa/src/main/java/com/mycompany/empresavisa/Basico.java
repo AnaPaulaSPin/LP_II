@@ -7,4 +7,9 @@ public class Basico extends Cartao {
         super(codPrincipal, CVV, dataExpedicao, validade, limite);
     }
     
+    @Override
+    public float calcularPontos(){
+        return 1;
+    }
+    
 }

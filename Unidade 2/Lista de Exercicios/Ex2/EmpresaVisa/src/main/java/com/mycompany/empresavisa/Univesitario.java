@@ -8,6 +8,11 @@ public class Univesitario extends Cartao {
         super(codPrincipal, CVV, dataExpedicao, validade,300);
         this.instituicao = instituicao;
     }
+    
+    @Override
+    public float calcularPontos(){
+        return 1;
+    }
 
     public String getInstituicao() {
         return instituicao;

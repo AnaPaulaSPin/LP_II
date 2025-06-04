@@ -8,15 +8,18 @@ public class Compra {
     private int data;
     private Cartao cartao;
     private float valor;
-    private int pontos;
+    private float pontos;
 
-    public Compra(String estabelicimento, String endereco, int data, Cartao cartao, float valor, int pontos) {
+    public Compra(String estabelicimento, String endereco, int data, Cartao cartao, float valor) {
         this.estabelicimento = estabelicimento;
         this.endereco = endereco;
         this.data = data;
         this.cartao = cartao;
         this.valor = valor;
-        this.pontos = pontos;
+    }
+    
+    public int gerarPontos(){
+        this.setPontos(cartao.calcularPontos() * this.getValor());
     }
 
     public String getEstabelicimento() {
@@ -59,7 +62,7 @@ public class Compra {
         this.valor = valor;
     }
 
-    public int getPontos() {
+    public float getPontos() {
         return pontos;
     }
 

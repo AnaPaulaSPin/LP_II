@@ -7,4 +7,9 @@ public class Ouro extends Cartao{
         super(codPrincipal, CVV, dataExpedicao, validade, 100000);
     }
     
+    @Override
+    public float calcularPontos(){
+        return 2;
+    }
+    
 }
