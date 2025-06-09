@@ -10,6 +10,11 @@ public class Univesitario extends Cartao {
     }
     
     @Override
+    public void imprimir() {
+       
+    }
+    
+    @Override
     public float calcularPontos(){
         return 1;
     }
@@ -21,4 +26,6 @@ public class Univesitario extends Cartao {
     public void setInstituicao(String instituicao) {
         this.instituicao = instituicao;
     } 
+
+    
 }

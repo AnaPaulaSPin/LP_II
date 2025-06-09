@@ -3,7 +3,7 @@ package com.mycompany.empresavisa;
 
 import java.util.ArrayList;
 
-public abstract class Cartao {
+public abstract class Cartao implements Print {
     private int codPrincipal;
     private int CVV;
     private int dataExpedicao;
@@ -19,6 +19,7 @@ public abstract class Cartao {
         this.limite = limite;
         this.compras = new ArrayList<>();
     }
+    
     public abstract float calcularPontos();
 
     public int getCodPrincipal() {

@@ -2,7 +2,7 @@
 package com.mycompany.empresavisa;
 
 
-public class Compra {
+public class Compra implements Print {
     private String estabelicimento;
     private String endereco;
     private int data;
@@ -18,8 +18,19 @@ public class Compra {
         this.valor = valor;
     }
     
+    @Override
+    public void imprimir(){
+        System.out.println(" Sua compra foi efeituada com sucesso!");
+        System.out.println("Estabelecimento: " + this.getEstabelicimento());
+        System.out.println("Endereco: " + this.getEndereco());
+        System.out.println("Data: " + this.getData());
+        System.out.println("Cartao: " + this.getCartao().imprimir());
+        System.out.println("Valor da compra: " + this.getValor());
+    }
+    
     public int gerarPontos(){
         this.setPontos(cartao.calcularPontos() * this.getValor());
+        return 0;
     }
 
     public String getEstabelicimento() {
@@ -55,7 +66,7 @@ public class Compra {
     }
 
     public float getValor() {
-        return valor;
+        return this.valor;
     }
 
     public void setValor(float valor) {
@@ -66,7 +77,7 @@ public class Compra {
         return pontos;
     }
 
-    public void setPontos(int pontos) {
+    public void setPontos(float pontos) {
         this.pontos = pontos;
     }
     
