@@ -21,6 +21,11 @@ public abstract class Cartao implements Print {
     }
     
     public abstract float calcularPontos();
+    
+    @Override
+    public void imprimir(){
+        
+    }
 
     public int getCodPrincipal() {
         return codPrincipal;
