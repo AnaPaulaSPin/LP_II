@@ -24,7 +24,8 @@ public class Compra implements Print {
         System.out.println("Estabelecimento: " + this.getEstabelicimento());
         System.out.println("Endereco: " + this.getEndereco());
         System.out.println("Data: " + this.getData());
-        System.out.println("Cartao: " + this.getCartao().imprimir());
+        System.out.println("Cartao: ");
+        this.getCartao().imprimir();
         System.out.println("Valor da compra: " + this.getValor());
     }
     
