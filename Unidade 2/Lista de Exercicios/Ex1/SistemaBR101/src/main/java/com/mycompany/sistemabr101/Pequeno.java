@@ -9,6 +9,8 @@ public class Pequeno extends Automovel {
         super(Placa, ano);
         this.modelo = modelo;
     }
+    
+    @Override
     public float calcularPedagio(){  
         return 6;
     }

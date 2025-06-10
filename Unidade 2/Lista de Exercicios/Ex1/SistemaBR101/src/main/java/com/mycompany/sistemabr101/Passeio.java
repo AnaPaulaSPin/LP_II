@@ -9,6 +9,7 @@ public class Passeio extends Automovel {
         this.numPassageiros = numPassageiros;
     }
     
+    @Override
     public float calcularPedagio(){
 
         return 5 * this.getNumPassageiros();

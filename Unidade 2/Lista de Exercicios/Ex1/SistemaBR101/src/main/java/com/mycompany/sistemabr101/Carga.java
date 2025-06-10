@@ -9,6 +9,7 @@ public class Carga extends Automovel {
         this.pesoMax = pesoMax;
         }
     
+    @Override
     public float calcularPedagio(){
        return 2 * this.getPesoMax();
     }

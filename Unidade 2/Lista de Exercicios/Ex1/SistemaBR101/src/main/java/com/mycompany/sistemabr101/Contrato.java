@@ -32,6 +32,21 @@ public class Contrato {
   
         return valor;
     }
+   
+    public float CalcularFatura(int n){
+        float valor = 0; int cont;
+        for(Automovel auto: automoveis){
+            cont = 0;
+            for(Passagem pass: auto.getPassagens()){
+                if(pass.getData().getMes() == n){
+                    cont++;
+                }
+            }
+            valor += auto.calcularPedagio() * cont;
+        }
+        
+        return valor;
+    }
 
     public String getNome() {
         return nome;
