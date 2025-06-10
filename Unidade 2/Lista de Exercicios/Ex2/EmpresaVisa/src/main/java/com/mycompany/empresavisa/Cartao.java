@@ -22,6 +22,15 @@ public abstract class Cartao implements Print {
     
     public abstract float calcularPontos();
     
+    public float calcularTotal(){
+        float total = 0;
+        for(Compra cont: compras){
+            total += cont.getValor();
+        }
+        
+        return total;
+    }
+    
     @Override
     public void imprimir(){
         
