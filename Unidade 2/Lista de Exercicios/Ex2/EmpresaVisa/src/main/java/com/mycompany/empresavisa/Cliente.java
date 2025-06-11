@@ -13,6 +13,12 @@ public class Cliente {
         this.telefone = telefone;
         this.meuCartao = meuCartao;
     }
+    
+     public Cliente(String nome, String cpf, String telefone) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.telefone = telefone;
+    }
 
     public String getNome() {
         return nome;
