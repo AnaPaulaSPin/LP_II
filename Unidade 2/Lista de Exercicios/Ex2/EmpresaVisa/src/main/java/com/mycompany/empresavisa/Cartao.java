@@ -31,6 +31,7 @@ public abstract class Cartao implements Print {
         return total;
     }
     
+    
     @Override
     public void imprimir(){
         

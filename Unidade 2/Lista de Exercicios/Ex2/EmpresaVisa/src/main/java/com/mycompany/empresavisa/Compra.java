@@ -29,9 +29,12 @@ public class Compra implements Print {
         System.out.println("Valor da compra: " + this.getValor());
     }
     
-    public int gerarPontos(){
+    public void gerarPontos(){
         this.setPontos(cartao.calcularPontos() * this.getValor());
-        return 0;
+    }
+    
+    public float pontosAdquiridos(){
+        return this.getValor() * cartao.calcularPontos();
     }
 
     public String getEstabelicimento() {

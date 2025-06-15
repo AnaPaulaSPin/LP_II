@@ -19,6 +19,14 @@ public class Cliente {
         this.cpf = cpf;
         this.telefone = telefone;
     }
+     
+     public float totalPontos(){
+         float pontos = 0;
+         for(Compra shop: this.getMeuCartao().getCompras()){
+             pontos+= shop.pontosAdquiridos();
+         }
+         return pontos;
+     }
 
     public String getNome() {
         return nome;
