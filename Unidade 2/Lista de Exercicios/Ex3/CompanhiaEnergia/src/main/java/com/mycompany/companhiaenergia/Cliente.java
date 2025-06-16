@@ -19,7 +19,7 @@ public abstract class Cliente {
         for(Consumo cons: consumos){
             total+= this.calcularConta(cons);
         }
-        return total;
+        return total+1;
     }
 
     public String getNome() {
