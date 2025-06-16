@@ -9,6 +9,7 @@ public class Curto extends Artigos {
     public Curto(String instituicao, String titulo, String resumo, String textoCompleto, int pag) {
         super(titulo, resumo, textoCompleto, pag);
         this.instituicao = instituicao;
+        this
     }
 
     public String getInstituicao() {
